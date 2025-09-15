@@ -16,13 +16,19 @@ export const TodoInput = ({ onAdd }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex gap-3 mb-6 w-full max-w-md">
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Añadir tarea"
+        placeholder="Escribe una tarea..."
+        className="flex-grow px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-      <button type="submit">Agregar</button>
+      <button
+        type="submit"
+        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+      >
+        Agregar
+      </button>
     </form>
   );
 };

@@ -16,8 +16,10 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>📝 Lista de Tareas</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-start p-6">
+      <h1 className="text-4xl font-bold text-blue-700 mb-8">
+        📝 Lista de Tareas
+      </h1>
       <TodoInput onAdd={addTodo} />
       <TodoList todos={todos} onDelete={deleteTodo} />
     </div>
